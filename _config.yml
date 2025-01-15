@@ -1,0 +1,5 @@
+title: "Course Website"
+description: "Duckiebot exercise reports and code repository"
+theme: minima
+baseurl: "" # Leave empty if hosting at the root
+url: "https://<your-username>.github.io/course-website" # Replace with your actual URL
