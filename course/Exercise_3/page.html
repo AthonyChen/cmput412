@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duckiebot Exercise Deliverables</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background-color: #f4f4f4;
+            padding: 10px 0;
+        }
+
+        section {
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        img {
+            max-width: 70%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        iframe {
+            width: 80%;
+            height: 450px;
+            margin: 20px 0;
+            border: none;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        p, ul {
+            text-align: justify;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin: 10px 20px;
+            padding-left: 20px;
+        }
+
+        footer {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .references {
+            margin: 20px auto;
+            width: 80%;
+            text-align: left;
+        }
+
+        .references ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .references li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Duckiebot Exercise Deliverables</h1>
+    </header>
+
+    <section>
+        <h2>Deliverables</h2>
+        <article>
+            <h3>1. Duckiebot Driving in a Straight Line</h3>
+            <iframe src="image/videoplayback.webm" frameborder="0" allowfullscreen></iframe>
+            <p>This video shows the Duckiebot driving in a straight line. Despite calibration, some drift was observed in its motion, likely caused by uneven wheels or misalignment in the motor speeds.</p>
+        </article>
+
+        <article>
+            <h3>2. Lane Following Demo</h3>
+            <iframe src="image/Exercise%201%20-%20lane%20follow.mp4" frameborder="0" allowfullscreen></iframe>
+            <p>This video shows the Duckiebot following a lane. Initially, it struggled at the first corner due to network delays and a significant deviation caused by the robot’s attempt to correct its path. The delay was likely due to too many people using the same network, affecting the communication between the robot and the computer. As the demo progressed, the Duckiebot followed the lane more accurately.</p>
+        </article>
+
+        <article>
+            <h3>3. Camera Output and Motor Signals</h3>
+            <img src="image/inputoutput.png" alt="Dashboard screenshot showing camera output and motor signals">
+            <p>This screenshot shows the Duckiebot's dashboard displaying the camera feed and motor signals during its operation. The image helps visualize the input from the camera and how the motor commands are generated.</p>
+        </article>
+
+        <article>
+            <h3>4. Intrinsics Calibration File</h3>
+            <img src="image/instrinstic.png" alt="Screenshot of intrinsics calibration.yaml">
+            <p>This image shows the intrinsics calibration file in YAML format. This file is essential for calibrating the Duckiebot’s camera and ensuring that it can properly interpret the environment it navigates.</p>
+        </article>
+
+        <article>
+            <h3>5. Extrinsics Calibration File</h3>
+            <img src="image/extrinstic.png" alt="Screenshot of extrinsics calibration.yaml">
+            <p>This screenshot shows the extrinsics calibration file in YAML format. This calibration is necessary for aligning the camera's perspective with the Duckiebot's movement, enabling it to follow the lane accurately.</p>
+        </article>
+
+        <article>
+            <h3>6. Duckiebot Greeting</h3>
+            <img src="image/hello.png" alt="Screenshot of Duckiebot saying 'Hello from MY_ROBOT'">
+            <p>This image shows the Duckiebot greeting, displaying "Hello from MY_ROBOT." It’s part of the Duckiebot's functionality to confirm that it is powered on and operational.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Write Up</h2>
+        <p>
+            This exercise involved setting up and calibrating the Duckiebot, as well as running demos to showcase its capabilities. Below are the key points:
+        </p>
+        <ul>
+            <li>The purpose of calibrating the camera and motors is to ensure accurate perception and control of the Duckiebot.</li>
+            <li>Docker is useful as it provides an isolated and consistent environment for running the Duckiebot software. We also ran into issues due to newer versions of Ubuntu, which required creating a virtual environment to download all the necessary dependencies.</li>
+            <li>Drift during straight-line driving was often caused by wheels that were misshaped or uneven, affecting the accuracy of the bot’s movement.</li>
+            <li>In the lane-following demo, the Duckiebot initially struggled at the first corner. We theorized that this was caused by network delays due to too many people using the same network. This was further supported by the bot making a huge deviation to get back on track, suggesting a delay in communication between the computer and the robot. However, as the demo went on, the Duckiebot followed the lane quite well.</li>
+            <li>Another challenge occurred when we were packing up. Our robot wouldn’t turn off, despite trying various solutions. Not even Adam, who had more experience, could resolve it. He said he would manually unplug the robot safely when we left.</li>
+            <li>The Duckiebot likely uses a combination of computer vision and control algorithms to follow the lane, balancing input from the camera and motor commands.</li>
+        </ul>
+        <p>
+            Key takeaways: Robots are not always perfect. While calibrating them is important, there will always be external factors that affect their performance, such as uneven mats on the road caused by accidental steps. Calibration could also be flawed, as seen with one side of the calibration box where the tape was coming off, causing the images not to be flat. Robots require a lot of work, and instead of always blaming the code when something doesn't work, I now recognize the importance of considering potential hardware issues with the robot.
+        </p>
+    </section>
+
+    <section class="references">
+        <h2>References</h2>
+        <ul>
+            <li><a href="https://docs-old.duckietown.org/daffy/duckietown-robotics-development/out/python_programs_environments.html" target="_blank">Duckietown Robotics Development - Python Programs & Environments</a></li>
+            <li><a href="https://docs.duckietown.com/daffy/opmanual-duckiebot/setup/setup_laptop/index.html" target="_blank">Duckiebot Setup - Setting Up Laptop</a></li>
+            <li>ChatGPT (OpenAI, 2025) - Assistance with writing and editing the write-up</li>
+        </ul>
+    </section>
+</body>
+</html>

@@ -13,6 +13,7 @@ Are not looking for any contributions.
 
 * [Anthony Chen](https://github.com/AthonyChen)
 * [Zhao Yu li](https://github.com/BlitzWrecker)
+* [Yushu Zhang](https://github.com/dreambigzhang)
 
 ## License
 
